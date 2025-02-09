@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        i {
+            color: #007bff;
+            padding-right: 10px;
+        }
+        body {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="../images/logo.png" alt="Logo" height="50"> AI for Beginners
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-5">
+    <div class="row">
+        <!-- Left Column: Contact Info -->
+        <div class="col-md-6">
+            <h2>Contact Us</h2>
+            <p>Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
+            <div class="list-group">
+                <a href="tel:+90 212 777 01 01" class="list-group-item list-group-item-action">
+                    <i class="fas fa-phone-alt"></i><span class="button-text">0 212 777 01 01</span>
+                </a>
+                <a href="mailto:info@ai.com" class="list-group-item list-group-item-action">
+                    <i class="fas fa-envelope"> </i><span class="button-text">info@ai.com</span>
+                </a>
+                <a href="https://www.google.com/maps/place/Beştelsiz,+Belediye+Cd.+No:5,+34020+Zeytinburnu%2Fİstanbul" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">
+                    <i class="fas fa-map-marker-alt" style="padding-left: 0;"></i><span class="button-text">Beştelsiz, Belediye Cd. No:5,Zeytinburnu/İstanbul 34020</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-md-6">
+            <form id="contact-form" method="POST" action="/contact-us/#contact-form" novalidate>
+
+                <!-- 1. Subject / Reason for Inquiry -->
+                <div class="form-group">
+                    <label for="contact-subject">Subject / Reason <span class="text-danger">*</span></label>
+                    <select id="contact-subject" class="form-control" required name="subject">
+                        <option value="">Select a reason...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Technical Support</option>
+                    </select>
+                </div>
+
+                <!-- 2. Name Fields -->
+                <div class="form-group">
+                    <label for="contact-first">Name <span class="text-danger">*</span></label>
+                    <div class="d-flex">
+                        <input type="text" id="contact-first" class="form-control mr-2" placeholder="First Name" required name="name_first">
+                        <input type="text" id="contact-last" class="form-control" placeholder="Last Name" name="name_last">
+                    </div>
+                </div>
+
+                <!-- 3. Email Field -->
+                <div class="form-group">
+                    <label for="contact-email">Email <span class="text-danger">*</span></label>
+                    <input type="email" id="contact-email" class="form-control" placeholder="example@email.com" required name="email">
+                </div>
+
+                <!-- 4. Phone Field -->
+                <div class="form-group">
+                    <label for="contact-phone">Phone</label>
+                    <input type="tel" id="contact-phone" class="form-control" placeholder="xxx-xxx-xxxx" name="phone">
+                </div>
+
+                <!-- 5. Preferred Contact Method -->
+                <div class="form-group">
+                    <label>Preferred Contact Method <span class="text-danger">*</span></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contact_method" id="contact-method-email" value="email" required>
+                        <label class="form-check-label" for="contact-method-email">Email</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contact_method" id="contact-method-phone" value="phone" required>
+                        <label class="form-check-label" for="contact-method-phone">Phone</label>
+                    </div>
+                </div>
+
+                <!-- 6. Message Field -->
+                <div class="form-group">
+                    <label for="contact-message">Message <span class="text-danger">*</span></label>
+                    <textarea id="contact-message" class="form-control" placeholder="Type your message ..." required name="message"></textarea>
+                </div>
+
+                <!-- 7. Company / Organization -->
+                <div class="form-group">
+                    <label for="contact-company">Company / Organization (if applicable)</label>
+                    <input type="text" id="contact-company" class="form-control" placeholder="Company Name" name="company">
+                </div>
+
+                <!-- 8. Location / Address -->
+                <div class="form-group">
+                    <label for="contact-location">Location / Address</label>
+                    <input type="text" id="contact-location" class="form-control" placeholder="City, State, Country" name="location">
+                </div>
+
+                <!-- 9. Optional File Upload Field -->
+                <div class="form-group">
+                    <label for="contact-file">Attach a file (optional)</label>
+                    <input type="file" id="contact-file" class="form-control" name="file">
+                </div>
+
+                <!-- 10. How Did You Hear About Us? -->
+                <div class="form-group">
+                    <label for="contact-hear-about">How did you hear about us?</label>
+                    <select id="contact-hear-about" class="form-control" name="hear_about">
+                        <option value="">Select an option...</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="friend">Friend/Colleague</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- 11. Date / Time Fields -->
+                <div class="form-group">
+                    <label for="contact-date">Preferred Date</label>
+                    <input type="date" id="contact-date" class="form-control" name="preferred_date">
+                </div>
+                <div class="form-group">
+                    <label for="contact-time">Preferred Time</label>
+                    <input type="time" id="contact-time" class="form-control" name="preferred_time">
+                </div>
+
+                <!-- 12. Newsletter Subscription Checkbox -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="contact-newsletter" name="newsletter">
+                    <label class="form-check-label" for="contact-newsletter">Sign up for our newsletter</label>
+                </div>
+
+                <!-- 13. Consent or Privacy Policy Acknowledgment Checkbox -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="contact-consent" name="consent" required>
+                    <label class="form-check-label" for="contact-consent">
+                        I agree to the
+                        <a href="privacy-policy.html" target="_blank">privacy policy</a>
+                    </label>
+                </div>
+
+                <!-- 14. reCAPTCHA or Anti-Spam Measures -->
+                <div class="form-group">
+                    <!-- Add your reCAPTCHA widget -->
+                    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                </div>
+
+                <!-- 15. Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                <!-- Hidden Fields (if needed) -->
+                <input type="hidden" name="form_id" value="contact_form">
+                <input type="hidden" name="_wp_http_referer" value="/contact-us/">
+            </form>
+
+        </div>
+    </div>
+</main>
+
+<!-- Google Maps Section -->
+<div class="container mt-5">
+    <iframe
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border:0; border-radius: 8px;"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6027.275228953916!2d28.89871256597024!3d40.99999787136707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb9d1694a2bf%3A0xc7093f681c41540!2sBe%C5%9Ftelsiz%2C%20Belediye%20Cd.%20No%3A5%2C%2034020%20Zeytinburnu%2F%C4%B0stanbul!5e0!3m2!1sen!2str!4v1707208324956">
+    </iframe>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 AI for Beginners. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

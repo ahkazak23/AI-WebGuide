@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI for Beginners</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    body {
+      background-color: #f0f8ff;
+    }
+    .card-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .card:hover .card-body {
+      opacity: 1; /* Show on hover */
+    }
+    .slogan {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 40px 0;
+      color: #333;
+      font-family: sans-serif;
+    }
+    .banner {
+      background: url('../images/banner.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .slogan {
+      text-align: center;
+      background: linear-gradient(to right, #1e3c72, #2a5298); /* Gradient background */
+      color: white;
+      padding: 40px 20px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slogan h1 {
+      animation: fadeIn 1.5s ease-in-out;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../images/logo.png" alt="Logo" height="50"> AI for Beginners
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="banner">
+  <div class="overlay">
+    <h1>AI for Beginners</h1>
+    <p>Start Learning AI Today</p>
+  </div>
+  <img src="../images/banner.jpg" alt="Neural Networks">
+</div>
+
+
+<!-- Bootstrap Image Gallery -->
+<section class="container py-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative">
+        <img src="../images/slide1.webp" class="card-img-top" alt="AI Basics">
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">Introduction to AI</h5>
+          <p class="card-text">Understand the fundamentals of Artificial Intelligence.</p>
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative">
+        <img src="../images/slide2.webp" class="card-img-top" alt="AI Basics">
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">Machine Learning Basics</h5>
+          <p class="card-text">Explore how machines learn from data.</p>
+          <a href="about.html" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative">
+        <img src="../images/slide3.webp" class="card-img-top" alt="AI Basics">
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">Neural Networks</h5>
+          <p class="card-text">Learn about deep learning and AI models.</p>
+          <a href="about.html" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative" >
+        <img src="../images/slide4.webp" class="card-img-top" alt="AI Basics">
+        <!-- Removed opacity-0 and transition-opacity classes here -->
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">AI in Real World</h5>
+          <p class="card-text">See how AI is shaping industries and businesses.</p>
+          <a href="about.html" class="btn btn-primary">Discover</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative" >
+        <img src="../images/slide5.webp" class="card-img-top" alt="AI Basics">
+        <!-- Removed opacity-0 and transition-opacity classes here -->
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">AI in Healthcare</h5>
+          <p class="card-text">Discover AI-powered medical technology and diagnostics.</p>
+          <a href="about.html" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card w-100 border-0 shadow-sm overflow-hidden position-relative">
+        <img src="../images/slide6.webp" class="card-img-top" alt="AI in Everyday Life">
+        <div class="card-body text-center bg-dark text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title">AI in Everyday Life</h5>
+          <p class="card-text">Explore how AI transforms daily experiences—from smart homes and personal assistants to tailored digital interactions.</p>
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Slogan Section -->
+<section class="slogan">
+  <h1>Unlock the Power of Artificial Intelligence.</h1>
+</section>
+
+<!-- About & Projects Section using Bootstrap -->
+<!-- About & Projects Section using Bootstrap -->
+<section class="container py-5">
+  <div class="row">
+    <!-- About Section -->
+    <div class="col-md-6">
+      <div class="clearfix">
+        <img src="../images/about.jpeg" alt="AI Learning" class="img-fluid rounded float-start me-3" style="width: 375px;">
+        <h2>About Us</h2>
+        <p>
+          Artificial Intelligence is transforming the world, and our platform is dedicated to making AI learning simple, engaging, and accessible to everyone.
+          Whether you are a student, developer, or tech enthusiast, we provide step-by-step guidance on AI concepts, including Machine Learning,
+          Deep Learning, and Neural Networks. Our goal is to help beginners understand AI's real-world applications, from healthcare innovations
+          to smart automation in industries. Join us in unlocking the power of AI and start your journey today!
+        </p>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="col-md-6">
+      <h2>Projects We Have Done</h2>
+      <ul class="list-unstyled">
+        <li class="d-flex align-items-center mb-2">
+          <span class="me-2 text-success">✅</span>
+          AI Chatbot Development
+        </li>
+        <li class="d-flex align-items-center mb-2">
+          <span class="me-2 text-success">✅</span>
+          Image Recognition with Neural Networks
+        </li>
+        <li class="d-flex align-items-center mb-2">
+          <span class="me-2 text-success">✅</span>
+          Sentiment Analysis on Social Media Data
+        </li>
+        <li class="d-flex align-items-center mb-2">
+          <span class="me-2 text-success">✅</span>
+          AI-Powered Healthcare Diagnosis
+        </li>
+        <li class="d-flex align-items-center">
+          <span class="me-2 text-success">✅</span>
+          Automated Machine Learning Pipelines
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center bg-dark text-light py-3">
+  <p>&copy; 2025 AI for Beginners. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery - Our Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .card:hover .card-body {
+      opacity: 1; /* Show on hover */
+    }
+    .card-img-top {
+      height: 300px;
+      width: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../images/logo.png" alt="Logo" height="50"> AI for Beginners
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Gallery Header -->
+<header class="jumbotron text-center" style="padding: 0">
+  <h1 class="display-4">Our Projects</h1>
+  <p class="lead">Explore innovative projects powered by Artificial Intelligence</p>
+</header>
+
+<!-- Gallery Section -->
+<section class="container">
+  <div class="row">
+    <!-- Gallery Item 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project1.webp" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title">AI Chatbot for Beginners</h5>
+          <p class="card-text">An interactive chatbot designed to help newcomers explore basic AI concepts. This project guides users through common questions, provides tutorials, and demonstrates how natural language processing works in real-time.</p>
+          <a href="project1.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project2.webp" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title">Image Classification with Convolutional Neural Networks</h5>
+          <p class="card-text">A hands-on project that shows how to build an image classifier using CNNs. Beginners learn about neural networks by training a model to recognize and categorize images, making complex concepts accessible through practical application.</p>
+          <a href="project2.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project3.webp" class="card-img-top" alt="Project 3">
+        <div class="card-body">
+          <h5 class="card-title">Sentiment Analysis on Social Media</h5>
+          <p class="card-text">Dive into natural language processing with a project that analyzes public sentiment. This project uses real social media data to determine opinions and moods, offering a clear example of text analysis and data visualization.</p>
+          <a href="project3.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 4 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project4.webp" class="card-img-top" alt="Project 4">
+        <div class="card-body">
+          <h5 class="card-title">Personalized Recommendation System</h5>
+          <p class="card-text">Learn how AI tailors experiences by building a recommendation engine. This project demonstrates how to suggest personalized learning resources or products based on user preferences and behavior, blending machine learning with real-world applications.</p>
+          <a href="project4.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 5 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project5.webp" class="card-img-top" alt="Project 5">
+        <div class="card-body">
+          <h5 class="card-title">Predictive Analytics for Student Performance</h5>
+          <p class="card-text">Explore the predictive power of machine learning by analyzing educational data. This project uses historical records to forecast academic performance, helping beginners understand the fundamentals of data-driven decision making.</p>
+          <a href="project5.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 6 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="../images/project6.webp" class="card-img-top" alt="Project 6">
+        <div class="card-body">
+          <h5 class="card-title">AI-Powered Healthcare Diagnostics</h5>
+          <p class="card-text">Discover how AI can assist in healthcare by developing a diagnostic tool. This project employs machine learning to analyze medical data, identify patterns, and support early diagnosis, showcasing AI’s potential in improving patient care.</p>
+          <a href="project6.html" class="btn btn-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 AI for Beginners. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
